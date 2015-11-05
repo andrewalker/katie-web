@@ -1,3 +1,4 @@
+[%# vim: set ft=tt2html: %]
 [% WRAPPER base.tt2 %]
 <h2>Do it yourself</h2>
 

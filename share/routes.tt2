@@ -1,3 +1,4 @@
+[%# vim: set ft=tt2html: %]
 [% WRAPPER base.tt2 %]
 <h2>Would you like to use one of our most popular routes?</h2>
 
@@ -20,6 +21,6 @@
 
 <nav class='buttons'>
     <p>Feeling naughty? Build a route yourself!</p>
-    <a class='btn btn-primary' href='#'>I'll do it myself!</a>
+    <a class='btn btn-primary' href='/diy'>I'll do it myself!</a>
 </nav>
 [% END %]

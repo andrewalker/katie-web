@@ -1,3 +1,4 @@
+[%# vim: set ft=tt2html: %]
 [% WRAPPER base.tt2 %]
 For each POI in selected route
     add POI info in the carousel

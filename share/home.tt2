@@ -1,12 +1,14 @@
+[%# vim: set ft=tt2html: %]
 [% WRAPPER base.tt2 %]
-<img src='/static/images/bubble.png' width='250' style='padding-top: 30px;'>
-<img src='/static/images/katie.png' width='200'>
 
-<div style='position: absolute; font-size: 24px; top: 170px; left: 25px; width: 200px; '>
+<div class='greeting'>
     <p>Nice to meet you!<br>
     I am Katie.</p>
     <p>I will tell you where to go to enjoy the Museumnacht!</p>
 </div>
+
+<img src='/static/images/bubble.png' style='margin-top: 30px;'>
+<img src='/static/images/katie.png'>
 
 <nav class='buttons'>
     <a class='btn btn-primary' href='/routes'>Let's go!</a>
