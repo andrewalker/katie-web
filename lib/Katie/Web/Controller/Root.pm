@@ -9,17 +9,25 @@ __PACKAGE__->config(namespace => '');
 sub index :Path :Args(0) {
     my ( $self, $ctx ) = @_;
 
-    $ctx->stash(
-        template => 'home.tt2',
-    );
+    $ctx->stash(template => 'home.tt2');
 }
 
 sub routes :Local :Args(0) {
     my ( $self, $ctx ) = @_;
 
-    $ctx->stash(
-        template => 'routes.tt2',
-    );
+    $ctx->stash(template => 'routes.tt2');
+}
+
+sub diy :Local :Args(0) {
+    my ( $self, $ctx ) = @_;
+
+    $ctx->stash(template => 'diy.tt2');
+}
+
+sub selected_route :Path('selected-route') :Args(0) {
+    my ( $self, $ctx ) = @_;
+
+    $ctx->stash(template => 'selected-route.tt2');
 }
 
 sub default :Path {
