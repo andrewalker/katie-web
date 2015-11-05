@@ -6,7 +6,7 @@ Help us out, Katie!
 
 ````shell
 
-    $ ./vendor/bin/carton install
+    $ ./vendor/bin/carton install --cached
     $ ./vendor/bin/carton exec plackup -Ilib -r
 
 ````
