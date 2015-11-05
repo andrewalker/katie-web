@@ -3,18 +3,18 @@
 <h2>Would you like to use one of our most popular routes?</h2>
 
 <ul class='categories'>
-    <li><a href='#'>
+    <li><a href='/routes/1'>
         <div class='thumb'><img src='/static/images/amsterdam.jpg' width='250'></div>
         <span>Amsterdam 101</span></a>
     </li>
-    <li><a href='#'>
+    <li><a href='/routes/2'>
         <div class='thumb'><img src='/static/images/amsterdam.jpg' width='250'></div>
         <span>3 hour tour</span></a>
     </li>
-    <li><a href='#'>
+    <li><a href='/routes/3'>
         <div class='thumb'><img src='/static/images/amsterdam.jpg' width='250'></div>
         <span>Museum Crawl</span></a></li>
-    <li><a href='#'>
+    <li><a href='/routes/4'>
         <div class='thumb'><img src='/static/images/amsterdam.jpg' width='250'></div>
         <span>Hidden Gems</span></a></li>
 </ul>

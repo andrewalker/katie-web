@@ -1,5 +1,162 @@
 [%# vim: set ft=tt2html: %]
 [% WRAPPER base.tt2 %]
-For each POI in selected route
-    add POI info in the carousel
+<div id="route-museums" class="carousel slide" data-ride="carousel" data-interval="false">
+    <ol class="carousel-indicators">
+        <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+        <li data-target="#carousel-example-generic" data-slide-to="1"></li>
+        <li data-target="#carousel-example-generic" data-slide-to="2"></li>
+        <li data-target="#carousel-example-generic" data-slide-to="3"></li>
+    </ol>
+
+    <div class="carousel-inner" role="listbox">
+        <div class="item active">
+            <h2><span>You want to go to</span>
+            Van Gogh Museum</h2>
+
+            <div class="museum-summary">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/0/08/Van_Gogh_Museum_Amsterdam.jpg" width="300">
+                <div class="ratings">
+                    <p class="address">Museumplein 6</p>
+                    <div class="rating">
+                        <span class="glyphicon glyphicon-star"></span>
+                        <span class="glyphicon glyphicon-star"></span>
+                        <span class="glyphicon glyphicon-star"></span>
+                    </div>
+                    <div class="crowd">
+                        <span class="glyphicon glyphicon-user"></span>
+                        <span class="glyphicon glyphicon-user off"></span>
+                        <span class="glyphicon glyphicon-user off"></span>
+                    </div>
+                    <div class="price">
+                        <span class="glyphicon glyphicon-usd"></span>
+                        <span class="glyphicon glyphicon-usd off"></span>
+                        <span class="glyphicon glyphicon-usd off"></span>
+                    </div>
+                    <div class="price">
+                        <span class="glyphicon glyphicon-time"></span>
+                        <span class="glyphicon glyphicon-time"></span>
+                        <span class="glyphicon glyphicon-time off"></span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="map" style="text-align: center"><img src="/static/images/map.png" width="480"></div>
+        </div><!-- item -->
+        <div class="item">
+            <h2><span>You want to go to</span>
+            Rijksmuseum</h2>
+
+            <div class="museum-summary">
+                <img src="http://www.iamsterdam.com/remote/ndtrc/Images/20101207/1d7707b0-2080-49e7-a34b-32f9a9ac6236.jpg" width="480">
+                <div class="ratings">
+                    <p>Museumstraat 1</p>
+                    <div class="rating">
+                        <span class="glyphicon glyphicon-star"></span>
+                        <span class="glyphicon glyphicon-star"></span>
+                        <span class="glyphicon glyphicon-star"></span>
+                    </div>
+                    <div class="crowd">
+                        <span class="glyphicon glyphicon-user"></span>
+                        <span class="glyphicon glyphicon-user"></span>
+                        <span class="glyphicon glyphicon-user off"></span>
+                    </div>
+                    <div class="price">
+                        <span class="glyphicon glyphicon-usd"></span>
+                        <span class="glyphicon glyphicon-usd"></span>
+                        <span class="glyphicon glyphicon-usd"></span>
+                    </div>
+                    <div class="price">
+                        <span class="glyphicon glyphicon-time"></span>
+                        <span class="glyphicon glyphicon-time"></span>
+                        <span class="glyphicon glyphicon-time"></span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="map" style="text-align: center"><img src="/static/images/map.png" width="480"></div>
+        </div><!-- item -->
+        <div class="item">
+            <h2><span>You want to go to</span>
+            Museum of Bags and Purses</h2>
+
+            <div class="museum-summary">
+                <img src="http://img1.10bestmedia.com/Images/Photos/105402/museum-of-bags-purses-amsterdam-tassenmuseum_54_990x660_201406011713.jpg" width="480">
+                <div class="ratings">
+                    <p class="address">Herengracht 573</p>
+                    <div class="rating">
+                        <span class="glyphicon glyphicon-star"></span>
+                        <span class="glyphicon glyphicon-star off"></span>
+                        <span class="glyphicon glyphicon-star off"></span>
+                    </div>
+                    <div class="crowd">
+                        <span class="glyphicon glyphicon-user off"></span>
+                        <span class="glyphicon glyphicon-user off"></span>
+                        <span class="glyphicon glyphicon-user off"></span>
+                    </div>
+                    <div class="price">
+                        <span class="glyphicon glyphicon-usd"></span>
+                        <span class="glyphicon glyphicon-usd off"></span>
+                        <span class="glyphicon glyphicon-usd off"></span>
+                    </div>
+                    <div class="price">
+                        <span class="glyphicon glyphicon-time"></span>
+                        <span class="glyphicon glyphicon-time off"></span>
+                        <span class="glyphicon glyphicon-time off"></span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="map" style="text-align: center"><img src="/static/images/map.png" width="480"></div>
+        </div><!-- item -->        <div class="item">
+            <h2><span>You want to go to</span>
+            Amsterdam Dungeon</h2>
+
+            <div class="museum-summary">
+                <img src="http://www.kittehscupcakes.nl/wp-content/uploads/2013/10/amsdungeonbar1.png" width="480">
+                <div class="ratings">
+                    <p class="address">Rokin 78</p>
+                    <div class="rating">
+                        <span class="glyphicon glyphicon-star"></span>
+                        <span class="glyphicon glyphicon-star"></span>
+                        <span class="glyphicon glyphicon-star off"></span>
+                    </div>
+                    <div class="crowd">
+                        <span class="glyphicon glyphicon-user off"></span>
+                        <span class="glyphicon glyphicon-user off"></span>
+                        <span class="glyphicon glyphicon-user off"></span>
+                    </div>
+                    <div class="price">
+                        <span class="glyphicon glyphicon-usd"></span>
+                        <span class="glyphicon glyphicon-usd off"></span>
+                        <span class="glyphicon glyphicon-usd off"></span>
+                    </div>
+                    <div class="price">
+                        <span class="glyphicon glyphicon-time"></span>
+                        <span class="glyphicon glyphicon-time off"></span>
+                        <span class="glyphicon glyphicon-time off"></span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="map" style="text-align: center"><img src="/static/images/map.png" width="480"></div>
+        </div><!-- item -->
+    </div><!-- carousel-inner -->
+</div><!-- route-museums -->
+
+<nav class="buttons">
+    <a class="btn btn-warning" href="#">Skip this one</a>
+</nav>
+
+<script>
+$(function() {
+    var $carousel = $('#route-museums');
+    $carousel
+        .swiperight(function(){
+            $carousel.carousel('prev');
+        })
+        .swipeleft(function() {
+            $carousel.carousel('next');
+        })
+});
+</script>
 [% END %]
