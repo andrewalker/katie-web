@@ -7,15 +7,25 @@ BEGIN { extends 'Catalyst::Controller' }
 __PACKAGE__->config(namespace => '');
 
 sub index :Path :Args(0) {
-    my ( $self, $c ) = @_;
+    my ( $self, $ctx ) = @_;
 
-    $c->response->body( 'Hello World' );
+    $ctx->stash(
+        template => 'home.tt2',
+    );
+}
+
+sub routes :Local :Args(0) {
+    my ( $self, $ctx ) = @_;
+
+    $ctx->stash(
+        template => 'routes.tt2',
+    );
 }
 
 sub default :Path {
-    my ( $self, $c ) = @_;
-    $c->response->body( 'Page not found' );
-    $c->response->status(404);
+    my ( $self, $ctx ) = @_;
+    $ctx->res->body( 'Page not found' );
+    $ctx->res->status(404);
 }
 
 sub end : ActionClass('RenderView') {}

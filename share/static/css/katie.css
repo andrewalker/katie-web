@@ -1,0 +1,73 @@
+html, body {
+    height: 100%;
+    min-height: 790px;
+}
+
+body {
+    width: 500px;
+    margin: 0px auto;
+    min-height: 100et;
+    border: 1px solid #ddd;
+    font-family: "Roboto";
+    font-size: 14px;
+    position: relative;
+    padding: 10px;
+}
+
+.buttons {
+    position: absolute;
+    bottom: 20px;
+    text-align: center;
+    width: 100%;
+}
+    .buttons p {
+        font-size: 25px;
+    }
+
+.btn {
+    border-radius: 30px;
+    height: 60px;
+    width: 400px;
+    font-size: 28px;
+    padding-top: 8px;
+}
+
+.btn-primary {
+    background-color: #0099e8;
+    border-color: transparent;
+}
+
+h2 {
+    font-size: 36px;
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+.categories {
+    list-style: none;
+    padding-left: 0px;
+    margin-left: 0px;
+}
+    .categories li {
+        width: 236px;
+        display: inline-block;
+        text-align: center;
+        font-size: 25px;
+        margin-bottom: 20px
+    }
+
+    .categories a {
+        text-decoration: none;
+        color: #000;
+    }
+    .categories span {
+        display: block;
+    }
+
+.thumb {
+    border-radius: 50px;
+    width: 100px;
+    height: 100px;
+    overflow: hidden;
+    display: inline-block;
+}
