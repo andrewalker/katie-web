@@ -14,8 +14,8 @@
 </ul>
 [% END %]
 [% BLOCK footer %]
-<nav class='buttons'>
+<!--nav class='buttons'>
     <p>Feeling naughty? Build a route yourself!</p>
     <a class='btn btn-primary' href='/routes/custom'>I'll do it myself!</a>
-</nav>
+</nav-->
 [% END %]
