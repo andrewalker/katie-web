@@ -7,7 +7,6 @@ requires 'namespace::autoclean';
 requires 'Config::General';
 requires 'JSON::XS';
 requires 'Template';
-requires 'Catalyst::View::JSON';
 requires 'Catalyst::View::TT';
 requires 'Gazelle';
 
