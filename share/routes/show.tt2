@@ -2,20 +2,20 @@
 [% WRAPPER base.tt2 %]
 <div id="route-museums" class="carousel slide" data-ride="carousel" data-interval="false" style="height: 790px">
     <ol class="carousel-indicators">
-        [% FOREACH l IN locations %]
+        [% FOREACH l IN route.items %]
         <li data-target="#route-museums" data-slide-to="[% loop.index() %]" [% IF loop.first() %] class="active"[% END %]></li>
         [% END %]
     </ol>
 
     <div class="carousel-inner" role="listbox">
-        [% FOREACH l IN locations %]
+        [% FOREACH l IN route.items %]
         <div class="item[% IF loop.first() %] active[% END %]">
             <h2><span>You want to go to</span>[% l.title %]</h2>
 
             <div class="museum-summary">
                 <img src="[% l.image %]" width="300">
                 <div class="ratings">
-                    <p class="address">[% l.address %]</p>
+                    <p class="address">[% l.location.address %]</p>
                     <div class="rating">
                         [% FILTER repeat(l.rating) -%]
                         <span class="glyphicon glyphicon-star"></span>
@@ -41,10 +41,10 @@
                         [% END %]
                     </div>
                     <div class="price">
-                        [% FILTER repeat(l.time) %]
+                        [% FILTER repeat(l.time_label) %]
                         <span class="glyphicon glyphicon-time"></span>
                         [% END %]
-                        [% FILTER repeat(3 - l.time) %]
+                        [% FILTER repeat(3 - l.time_label) %]
                         <span class="glyphicon glyphicon-time off"></span>
                         [% END %]
                     </div>

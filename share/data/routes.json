@@ -1,0 +1,203 @@
+[
+	{
+		"name": "Amsterdam 101",
+		"items": [
+			{
+				"trcid": "56031fef-3398-4d0a-910b-956f8e6ea0ec",
+				"transport": "20",
+				"duration": "45",
+				"time_label": "2",
+				"crowd": "1",
+				"rating": "2",
+				"price": "0"
+			},
+			{
+				"trcid": "bda67090-7df7-47bd-aae8-ac27935c43ef",
+				"transport": "10",
+				"duration": "60",
+				"time_label": "2",
+				"crowd": "0",
+				"rating": "3",
+				"price": "0"
+
+			},
+			{
+				"trcid": "468c504e-2c9d-4d69-8327-5bb63a4ab627",
+				"transport": "15",
+				"duration": "75",
+				"time_label": "3",
+				"crowd": "2",
+				"rating": "3"
+			},
+			{
+				"trcid": "dd19da01-45a7-470a-b0df-a2feef783f77",
+				"transport": "10",
+				"duration": "45",
+				"time_label": "3",
+				"crowd": "3",
+				"rating": "3",
+				"price": "0"
+			}
+		]
+	},
+	{
+		"name": "Museum Crawl",
+		"items": [
+			{
+				"trcid": "71aa0732-99a1-4c27-abaa-62d81a43a8b1",
+				"transport": "0",
+				"duration": "60",
+				"time_label": "2",
+				"crowd": "3",
+				"rating": "3",
+				"price": "0"
+			},
+			{
+
+				"trcid": "e3f3d6d7-eaf9-4d39-af37-b97ba8a21243",
+				"transport": "15",
+				"duration": "45",
+				"time_label": "2",
+				"crowd": "2",
+				"rating": "3",
+				"price": "0"
+			},
+			{
+				"trcid": "4a57161c-9ebc-4175-98f4-37f79d7c1763",
+				"transport": "10",
+				"duration": "75",
+				"time_label": "3",
+				"crowd": "1",
+				"rating": "1",
+				"price": "0"
+			},
+			{
+				"trcid": "a0f6362d-f987-4af2-a060-f7ee2cb9790b",
+				"transport": "10",
+				"duration": "30",
+				"time_label": "1",
+				"crowd": "2",
+				"rating": "2",
+				"price": "0"
+			},
+			{
+				"trcid": "ef903344-0de1-4127-90dc-13db968e1875",
+				"transport": "15",
+				"duration": "45",
+				"time_label": "1",
+				"crowd": "2",
+				"rating": "2",
+				"price": "0"
+			},
+			{
+				"trcid": "0966a3f5-364b-4d54-a180-655fba8b312e",
+				"transport": "20",
+				"duration": "20",
+				"time_label": "1",
+				"crowd": "1",
+				"rating": "2",
+				"price": "0"
+			},
+			{
+				"trcid": "286711d8-02de-4ea3-9767-b626c52fdbb9",
+				"transport": "15",
+				"duration": "75",
+				"time_label": "3",
+				"crowd": "2",
+				"rating": "2",
+				"price": "0"
+			}
+		]
+	},
+	{
+		"name": "Around the City",
+		"items": [
+			{
+				"trcid": "0505f9b2-6ead-46c8-bb9b-178ffe219c79",
+				"transport": "20",
+				"duration": "60",
+				"time_label": "2",
+				"crowd": "2",
+				"rating": "3",
+				"price": "0"
+			},
+			{
+				"trcid": "95404120-70b7-427f-bd55-485b7bd144a5",
+				"transport": "15",
+				"duration": "60",
+				"time_label": "2",
+				"crowd": "1",
+				"rating": "2",
+				"price": "0"
+			},
+			{
+				"trcid": "c07649d4-9d95-468c-94c3-45d0dcb63332",
+				"transport": "30",
+				"duration": "45",
+				"time_label": "2",
+				"crowd": "0",
+				"rating": "1",
+				"price": "0"
+			},
+			{
+				"trcid": "2ba2fa84-b735-4f8c-91c5-a2c7ded1b57d",
+				"transport": "30",
+				"duration": "60",
+				"time_label": "3",
+				"crowd": "1",
+				"rating": "3",
+				"price": "0"
+			}
+		]
+	},
+	{
+		"name": "Hidden Gems",
+		"items": [
+			{
+				"trcid": "56031fef-3398-4d0a-910b-956f8e6ea0ec",
+				"transport": "20",
+				"duration": "45",
+				"time_label": "2",
+				"crowd": "1",
+				"rating": "3",
+				"price": "0"
+			},
+			{
+				"trcid": "4e39ce81-1b8f-48d4-ac7c-3dc8062fe1a3",
+				"transport": "15",
+				"duration": "45",
+				"time_label": "2",
+				"crowd": "1",
+				"rating": "3",
+				"price": "0"
+			},
+			{
+				"trcid": "67f6163d-a747-46a7-a39a-81528f5b8b04",
+				"transport": "15",
+				"duration": "30",
+				"time_label": "1",
+				"crowd": "1",
+				"rating": "3",
+				"price": "0"
+			},
+			{
+				"trcid": "7d869de4-71fc-4ce6-9534-a5988cc90041",
+				"transport": "10",
+				"duration": "60",
+				"time_label": "2",
+				"crowd": "1",
+				"rating": "3",
+				"price": "0"
+			},
+			{
+				"trcid": "48863d8e-2a32-4c3e-a9dd-80780ba2b37d",
+				"transport": "40",
+				"duration": "60",
+				"time_label": "3",
+				"crowd": "1",
+				"rating": "3",
+				"price": "0"
+			}
+		]
+	}
+]

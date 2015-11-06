@@ -11,29 +11,18 @@ sub base :Chained('/') :PathPrefix :CaptureArgs(0) {
 sub list :Chained('base') :PathPart('') :GET :Args(0) {
     my ( $self, $ctx ) = @_;
 
-    $ctx->stash(
+    my $i = 0;
+    my $routes = $ctx->model->routes;
 
+    $ctx->stash(
         routes => [
-            {
-                id => 1,
-                title => 'Amsterdam 101',
-                image => '/static/images/amsterdam.jpg',
-            },
-            {
-                id => 2,
-                title => '3 hour tour',
-                image => '/static/images/amsterdam.jpg',
-            },
-            {
-                id => 3,
-                title => 'Museum crawl',
-                image => '/static/images/amsterdam.jpg',
-            },
-            {
-                id => 4,
-                title => 'Hidden Gems',
-                image => '/static/images/amsterdam.jpg',
-            },
+            map {
+              {
+                  id    => $i++,
+                  title => $_->{name},
+                  image => '/static/images/amsterdam.jpg',
+              }
+            } @$routes
         ],
     );
 }
@@ -41,45 +30,10 @@ sub list :Chained('base') :PathPart('') :GET :Args(0) {
 sub show :Chained('base') :PathPart('') :GET :Args(1) {
     my ( $self, $ctx, $route ) = @_;
 
+    my $route = $ctx->model->routes->[int $route];
+
     $ctx->stash(
-        locations => [
-            {
-                title   => 'Van Gogh Museum',
-                image   => 'https://upload.wikimedia.org/wikipedia/commons/0/08/Van_Gogh_Museum_Amsterdam.jpg',
-                address => 'Museumplein 6',
-                rating  => 3,
-                crowd   => 1,
-                price   => 1,
-                time    => 2,
-            },
-            {
-                title   => 'Rijksmuseum',
-                image   => 'http://www.iamsterdam.com/remote/ndtrc/Images/20101207/1d7707b0-2080-49e7-a34b-32f9a9ac6236.jpg',
-                address => 'Museumstraat 1',
-                rating  => 3,
-                crowd   => 2,
-                price   => 3,
-                time    => 3,
-            },
-            {
-                title   => 'Museum of Bags and Purses',
-                image   => 'http://img1.10bestmedia.com/Images/Photos/105402/museum-of-bags-purses-amsterdam-tassenmuseum_54_990x660_201406011713.jpg',
-                address => 'Herengracht 573',
-                rating  => 1,
-                crowd   => 0,
-                price   => 1,
-                time    => 1,
-            },
-            {
-                title   => 'Amsterdam Dungeon',
-                image   => 'http://www.kittehscupcakes.nl/wp-content/uploads/2013/10/amsdungeonbar1.png',
-                address => 'Rokin 78',
-                rating  => 2,
-                crowd   => 0,
-                price   => 1,
-                time    => 1,
-            },
-        ],
+        route => $route
     );
 }
 
