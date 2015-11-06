@@ -10,6 +10,32 @@ sub base :Chained('/') :PathPrefix :CaptureArgs(0) {
 
 sub list :Chained('base') :PathPart('') :GET :Args(0) {
     my ( $self, $ctx ) = @_;
+
+    $ctx->stash(
+
+        routes => [
+            {
+                id => 1,
+                title => 'Amsterdam 101',
+                image => '/static/images/amsterdam.jpg',
+            },
+            {
+                id => 2,
+                title => '3 hour tour',
+                image => '/static/images/amsterdam.jpg',
+            },
+            {
+                id => 3,
+                title => 'Museum crawl',
+                image => '/static/images/amsterdam.jpg',
+            },
+            {
+                id => 4,
+                title => 'Hidden Gems',
+                image => '/static/images/amsterdam.jpg',
+            },
+        ],
+    );
 }
 
 sub show :Chained('base') :PathPart('') :GET :Args(1) {
