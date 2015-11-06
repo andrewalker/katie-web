@@ -17,7 +17,13 @@
 <body>
 
     <div class="wrapper">
-[% content %]
+        <div class="main">
+            [% content %]
+        </div>
+    </div>
+
+    <div class="footer">
+        [% PROCESS footer %]
     </div>
 
 </body>

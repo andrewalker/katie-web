@@ -3,3 +3,6 @@
 <!-- TODO -->
 
 [% END %]
+[% BLOCK footer %]
+...
+[% END %]

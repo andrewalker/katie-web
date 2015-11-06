@@ -18,9 +18,10 @@
         <div class='thumb'><img src='/static/images/amsterdam.jpg' width='250'></div>
         <span>Hidden Gems</span></a></li>
 </ul>
-
+[% END %]
+[% BLOCK footer %]
 <nav class='buttons'>
     <p>Feeling naughty? Build a route yourself!</p>
-    <a class='btn btn-primary' href='/diy'>I'll do it myself!</a>
+    <a class='btn btn-primary' href='/routes/custom'>I'll do it myself!</a>
 </nav>
 [% END %]

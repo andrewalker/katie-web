@@ -1,151 +1,61 @@
 [%# vim: set ft=tt2html: %]
 [% WRAPPER base.tt2 %]
-<div id="route-museums" class="carousel slide" data-ride="carousel" data-interval="false">
+<div id="route-museums" class="carousel slide" data-ride="carousel" data-interval="false" style="height: 790px">
     <ol class="carousel-indicators">
-        <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
-        <li data-target="#carousel-example-generic" data-slide-to="1"></li>
-        <li data-target="#carousel-example-generic" data-slide-to="2"></li>
-        <li data-target="#carousel-example-generic" data-slide-to="3"></li>
+        [% FOREACH l IN locations %]
+        <li data-target="#route-museums" data-slide-to="[% loop.index() %]" [% IF loop.first() %] class="active"[% END %]></li>
+        [% END %]
     </ol>
 
     <div class="carousel-inner" role="listbox">
-        <div class="item active">
-            <h2><span>You want to go to</span>
-            Van Gogh Museum</h2>
+        [% FOREACH l IN locations %]
+        <div class="item[% IF loop.first() %] active[% END %]">
+            <h2><span>You want to go to</span>[% l.title %]</h2>
 
             <div class="museum-summary">
-                <img src="https://upload.wikimedia.org/wikipedia/commons/0/08/Van_Gogh_Museum_Amsterdam.jpg" width="300">
+                <img src="[% l.image %]" width="300">
                 <div class="ratings">
-                    <p class="address">Museumplein 6</p>
+                    <p class="address">[% l.address %]</p>
                     <div class="rating">
+                        [% FILTER repeat(l.rating) -%]
                         <span class="glyphicon glyphicon-star"></span>
-                        <span class="glyphicon glyphicon-star"></span>
-                        <span class="glyphicon glyphicon-star"></span>
+                        [%- END -%]
+                        [% FILTER repeat(3 - l.rating) -%]
+                        <span class="glyphicon glyphicon-star off"></span>
+                        [%- END %]
                     </div>
                     <div class="crowd">
+                        [% FILTER repeat(l.crowd) %]
                         <span class="glyphicon glyphicon-user"></span>
+                        [% END %]
+                        [% FILTER repeat(3 - l.crowd) %]
                         <span class="glyphicon glyphicon-user off"></span>
-                        <span class="glyphicon glyphicon-user off"></span>
+                        [% END %]
                     </div>
                     <div class="price">
+                        [% FILTER repeat(l.price) %]
                         <span class="glyphicon glyphicon-usd"></span>
+                        [% END %]
+                        [% FILTER repeat(3 - l.price) %]
                         <span class="glyphicon glyphicon-usd off"></span>
-                        <span class="glyphicon glyphicon-usd off"></span>
+                        [% END %]
                     </div>
                     <div class="price">
+                        [% FILTER repeat(l.time) %]
                         <span class="glyphicon glyphicon-time"></span>
-                        <span class="glyphicon glyphicon-time"></span>
+                        [% END %]
+                        [% FILTER repeat(3 - l.time) %]
                         <span class="glyphicon glyphicon-time off"></span>
+                        [% END %]
                     </div>
                 </div>
             </div>
 
             <div class="map" style="text-align: center"><img src="/static/images/map.png" width="480"></div>
         </div><!-- item -->
-        <div class="item">
-            <h2><span>You want to go to</span>
-            Rijksmuseum</h2>
-
-            <div class="museum-summary">
-                <img src="http://www.iamsterdam.com/remote/ndtrc/Images/20101207/1d7707b0-2080-49e7-a34b-32f9a9ac6236.jpg" width="480">
-                <div class="ratings">
-                    <p>Museumstraat 1</p>
-                    <div class="rating">
-                        <span class="glyphicon glyphicon-star"></span>
-                        <span class="glyphicon glyphicon-star"></span>
-                        <span class="glyphicon glyphicon-star"></span>
-                    </div>
-                    <div class="crowd">
-                        <span class="glyphicon glyphicon-user"></span>
-                        <span class="glyphicon glyphicon-user"></span>
-                        <span class="glyphicon glyphicon-user off"></span>
-                    </div>
-                    <div class="price">
-                        <span class="glyphicon glyphicon-usd"></span>
-                        <span class="glyphicon glyphicon-usd"></span>
-                        <span class="glyphicon glyphicon-usd"></span>
-                    </div>
-                    <div class="price">
-                        <span class="glyphicon glyphicon-time"></span>
-                        <span class="glyphicon glyphicon-time"></span>
-                        <span class="glyphicon glyphicon-time"></span>
-                    </div>
-                </div>
-            </div>
-
-            <div class="map" style="text-align: center"><img src="/static/images/map.png" width="480"></div>
-        </div><!-- item -->
-        <div class="item">
-            <h2><span>You want to go to</span>
-            Museum of Bags and Purses</h2>
-
-            <div class="museum-summary">
-                <img src="http://img1.10bestmedia.com/Images/Photos/105402/museum-of-bags-purses-amsterdam-tassenmuseum_54_990x660_201406011713.jpg" width="480">
-                <div class="ratings">
-                    <p class="address">Herengracht 573</p>
-                    <div class="rating">
-                        <span class="glyphicon glyphicon-star"></span>
-                        <span class="glyphicon glyphicon-star off"></span>
-                        <span class="glyphicon glyphicon-star off"></span>
-                    </div>
-                    <div class="crowd">
-                        <span class="glyphicon glyphicon-user off"></span>
-                        <span class="glyphicon glyphicon-user off"></span>
-                        <span class="glyphicon glyphicon-user off"></span>
-                    </div>
-                    <div class="price">
-                        <span class="glyphicon glyphicon-usd"></span>
-                        <span class="glyphicon glyphicon-usd off"></span>
-                        <span class="glyphicon glyphicon-usd off"></span>
-                    </div>
-                    <div class="price">
-                        <span class="glyphicon glyphicon-time"></span>
-                        <span class="glyphicon glyphicon-time off"></span>
-                        <span class="glyphicon glyphicon-time off"></span>
-                    </div>
-                </div>
-            </div>
-
-            <div class="map" style="text-align: center"><img src="/static/images/map.png" width="480"></div>
-        </div><!-- item -->        <div class="item">
-            <h2><span>You want to go to</span>
-            Amsterdam Dungeon</h2>
-
-            <div class="museum-summary">
-                <img src="http://www.kittehscupcakes.nl/wp-content/uploads/2013/10/amsdungeonbar1.png" width="480">
-                <div class="ratings">
-                    <p class="address">Rokin 78</p>
-                    <div class="rating">
-                        <span class="glyphicon glyphicon-star"></span>
-                        <span class="glyphicon glyphicon-star"></span>
-                        <span class="glyphicon glyphicon-star off"></span>
-                    </div>
-                    <div class="crowd">
-                        <span class="glyphicon glyphicon-user off"></span>
-                        <span class="glyphicon glyphicon-user off"></span>
-                        <span class="glyphicon glyphicon-user off"></span>
-                    </div>
-                    <div class="price">
-                        <span class="glyphicon glyphicon-usd"></span>
-                        <span class="glyphicon glyphicon-usd off"></span>
-                        <span class="glyphicon glyphicon-usd off"></span>
-                    </div>
-                    <div class="price">
-                        <span class="glyphicon glyphicon-time"></span>
-                        <span class="glyphicon glyphicon-time off"></span>
-                        <span class="glyphicon glyphicon-time off"></span>
-                    </div>
-                </div>
-            </div>
-
-            <div class="map" style="text-align: center"><img src="/static/images/map.png" width="480"></div>
-        </div><!-- item -->
+        [% END %]
     </div><!-- carousel-inner -->
 </div><!-- route-museums -->
-
-<nav class="buttons">
-    <a class="btn btn-warning" href="#">Skip this one</a>
-</nav>
 
 <script>
 $(function() {
@@ -159,4 +69,10 @@ $(function() {
         })
 });
 </script>
+[% END %]
+
+[% BLOCK footer %]
+<nav class="buttons">
+    <a class="btn btn-warning" href="#">Skip this one</a>
+</nav>
 [% END %]

@@ -1,24 +1,41 @@
+html, body { height: 100% }
+
+/*Opera Fix*/
+body:before {
+	content:"";
+	height:100%;
+	float:left;
+	width:0;
+	margin-top:-32767px;/
+}
+
 body {
     font-family: "Roboto";
     font-size: 14px;
 }
 
+.main {
+	overflow:auto;
+	margin: 8px;
+	padding-bottom: 120px;  /* must be same height as the footer */
+}
+
+.footer {
+	position: relative;
+	margin-top: -120px; /* negative value of footer height */
+	height: 120px;
+	clear:both;
+}
+
 .wrapper {
     width: 500px;
-    left: 50%;
-    margin: 0 0 0 -250px;
-    min-height: 500px;
-    height: 100%;
+    margin: 0 auto;
+    min-height: 100%;
     border: 1px solid #ddd;
-    position: absolute;
-    padding: 10px;
 }
 
 .buttons {
-    position: absolute;
-    bottom: 20px;
     text-align: center;
-    width: 100%;
 }
     .buttons p {
         font-size: 25px;
@@ -150,10 +167,14 @@ h2 {
         background: #aaa;
     }
 
-.greeting {
+.greeting-box {
     position: absolute;
-    font-size: 22px;
+    left: 50%;
     top: 180px;
-    left: 28px;
+    margin: 0 0 0 -222px;
+    width: 500px;
+}
+.greeting {
+    font-size: 22px;
     width: 180px;
 }
