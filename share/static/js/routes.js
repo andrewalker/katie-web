@@ -50,7 +50,7 @@ for (var i = 0; i < Route.items.length; i++) {
     });
 }
 
-dir.route({ locations: loc, routeType: 'multimodal' });
+dir.route({ locations: loc, options: { routeType: 'pedestrian' } });
 
 map.addLayer(new CustomRouteLayer({
   directions: dir,
