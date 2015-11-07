@@ -1,6 +1,7 @@
 package Katie::Web::Controller::Routes;
 use Moose;
 use namespace::autoclean;
+use JSON::XS;
 
 BEGIN { extends 'Catalyst::Controller' }
 
@@ -30,10 +31,11 @@ sub list :Chained('base') :PathPart('') :GET :Args(0) {
 sub show :Chained('base') :PathPart('') :GET :Args(1) {
     my ( $self, $ctx, $route ) = @_;
 
-    my $route = $ctx->model->routes->[int $route];
+    $route = $ctx->model->routes->[int $route];
 
     $ctx->stash(
-        route => $route
+        route => $route,
+        route_json => encode_json $route,
     );
 }
 

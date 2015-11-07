@@ -113,13 +113,14 @@ h2 {
     margin-bottom: 10px
 }
 
-.museum-summary img {
+.museum-summary > img {
     width: 240px;
     float: left;
 }
 
 .museum-summary p {
-    font-size: 28px;
+    font-size: 20px;
+    margin-top: 20px;
 }
 
 .ratings {

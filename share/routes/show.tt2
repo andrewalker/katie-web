@@ -1,6 +1,7 @@
 [%# vim: set ft=tt2html: %]
 [% WRAPPER base.tt2 %]
-<div id="route-museums" class="carousel slide" data-ride="carousel" data-interval="false" style="height: 790px">
+<script>window.Route = [% route_json %]</script>
+<div id="route-museums" class="carousel slide" data-ride="carousel" data-interval="false" style="height: 850px">
     <ol class="carousel-indicators">
         [% FOREACH l IN route.items %]
         <li data-target="#route-museums" data-slide-to="[% loop.index() %]" [% IF loop.first() %] class="active"[% END %]></li>
@@ -9,13 +10,12 @@
 
     <div class="carousel-inner" role="listbox">
         [% FOREACH l IN route.items %]
-        <div class="item[% IF loop.first() %] active[% END %]">
+        <div class="item[% IF loop.first() %] active [% END %]">
             <h2><span>You want to go to</span>[% l.title %]</h2>
 
             <div class="museum-summary">
-                <img src="[% l.image %]" width="300">
+                <img src="[% l.image %]">
                 <div class="ratings">
-                    <p class="address">[% l.location.address %]</p>
                     <div class="rating">
                         [% FILTER repeat(l.rating) -%]
                         <span class="glyphicon glyphicon-star"></span>
@@ -49,30 +49,39 @@
                         [% END %]
                     </div>
                 </div>
+                <a style="display: block; padding: 10px; float: left; font-size: 18px; font-weight: bold; background: yellow" href="https://maps.google.com?saddr=Current+Location&daddr=[% l.location.latitude %],[% l.location.longitude %]" target="_blank">Get directions!</a>
+                <div style="clear: both"></div>
+                <p>[% l.short_description %]</p>
             </div>
-
-            <div class="map" style="text-align: center"><img src="/static/images/map.png" width="480"></div>
         </div><!-- item -->
         [% END %]
+        <div class="museum-summary" style="position:relative; margin-top: -370px">
+            <div id="map" style="height: 300px"></div>
+        </div>
     </div><!-- carousel-inner -->
 </div><!-- route-museums -->
 
+<script src="/static/js/routes.js"></script>
 <script>
 $(function() {
     var $carousel = $('#route-museums');
+
     $carousel
         .swiperight(function(){
             $carousel.carousel('prev');
         })
         .swipeleft(function() {
             $carousel.carousel('next');
-        })
+        });
+
+    $carousel.on('slid.bs.carousel', function () {
+        var i = $carousel.find('.item.active').index();
+        map.panTo([ Route.items[i].location.latitude, Route.items[i].location.longitude ]);
+        markers[i].openPopup();
+    });
 });
 </script>
 [% END %]
 
 [% BLOCK footer %]
-<nav class="buttons">
-    <a class="btn btn-warning" href="#">Skip this one</a>
-</nav>
 [% END %]

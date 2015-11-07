@@ -60,10 +60,14 @@ has museums => (
 
         for my $museum (@$museums) {
             next unless lc($museum->{location}{city} || '') eq 'amsterdam';
+            $museum->{location}{latitude}  =~ s[,][\.];
+            $museum->{location}{longitude} =~ s[,][\.];
             $result{ $museum->{trcid} } = {
-                title => $museum->{details}{en}{title},
-                location => $museum->{location},
-                image => $museum->{media}->[0]->{url},
+                title             => $museum->{details}{en}{title},
+                short_description => $museum->{details}{en}{shortdescription},
+                long_description  => $museum->{details}{en}{longdescription},
+                location          => $museum->{location},
+                image             => $museum->{media}->[0]->{url},
             };
         }
 
