@@ -20,7 +20,7 @@ sub list :Chained('base') :PathPart('') :GET :Args(0) {
               {
                   id    => $i++,
                   title => $_->{name},
-                  image => '/static/images/amsterdam.jpg',
+                  image => $_->{items}[3]{image},
               }
             } @$routes
         ],
